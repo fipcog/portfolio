@@ -17,7 +17,7 @@ type StyledImagePropsType = {
 
 
 
-export const Image = (props:ImagePropsType) => {
+export const AdaptiveImage = (props:ImagePropsType) => {
     return(
         <picture>
             <source srcSet={props.srcWebp} type='image/webp'/>
