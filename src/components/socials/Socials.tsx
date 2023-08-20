@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../icon/Icon";
+import { FlexWrapper } from "../FlexWrapper";
 
 export const Socials = () => {
 	return (
 		<SocialsWrapper>
-			<ul>
+			<FlexWrapper as='ul'>
 				<li>
 					<a href="#">
 						<Icon iconId="github"/>
@@ -21,7 +22,7 @@ export const Socials = () => {
 						<Icon iconId="tg" width="35px" height="30px"/>
 					</a>
 				</li>
-			</ul>
+			</FlexWrapper>
 		</SocialsWrapper>
 	)
 }
