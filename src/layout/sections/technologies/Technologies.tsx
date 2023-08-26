@@ -4,18 +4,23 @@ import { StyledSectionTitle } from '../../../components/sectiontitle/SectionTitl
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Skill } from './skill/Skill'
 import { AdditionalTech } from '../additionaltechnologies/AdditionalTech'
+import { Container } from '../../../components/Container'
 
 export const Technologies = () => {
-    return(
+    return (
         <StyledSection>
-            <StyledSectionTitle>Technologies</StyledSectionTitle>
-            <FlexWrapper direction='column' justify='center' align='senter'>
-                <Skill title='HTML' skillPercent='80%'/>
-                <Skill title='Css, Sass' skillPercent='75%'/>
-                <Skill title='React' skillPercent='70%'/>
-                <Skill title='Styled components' skillPercent='75%'/>
-            </FlexWrapper>
-            <AdditionalTech/>
+            <Container>
+                <FlexWrapper direction='column' justify='center' align='center'>
+                    <StyledSectionTitle>Technologies</StyledSectionTitle>
+                    <FlexWrapper direction='column' justify='center' align='senter'>
+                        <Skill title='HTML' skillPercent='80%' />
+                        <Skill title='Css, Sass' skillPercent='75%' />
+                        <Skill title='React' skillPercent='70%' />
+                        <Skill title='Styled components' skillPercent='75%' />
+                    </FlexWrapper>
+                    <AdditionalTech />
+                </FlexWrapper>
+            </Container>
         </StyledSection>
     )
 }

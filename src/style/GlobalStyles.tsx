@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -14,10 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     body {
         margin: 0;
 
-        background-color:  #0F1624;
-        color: #e4e2e2;
+        background-color: ${theme.colors.primaryBgr};
+        color: ${theme.colors.color};
+        font-weight: 500;
 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
             sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -27,5 +29,21 @@ export const GlobalStyles = createGlobalStyle`
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
             monospace;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    main section:nth-of-type(even) {
+        background-color: ${theme.colors.secondaryBgr};
+    }
+
+    h1, h2 {
+        font-weight: 600;
     }
 `
