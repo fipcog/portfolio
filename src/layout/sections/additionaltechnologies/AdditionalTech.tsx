@@ -8,7 +8,7 @@ export const AdditionalTech = () => {
     return(
         <StyledTechSection>
             <StyledSectionTitle>Additional technologies and skills</StyledSectionTitle>
-            <FlexWrapper wrap='wrap' justify='space-around' align='center' >
+            <FlexWrapper wrap='wrap' justify='center' align='center' gap='0 50px'>
                 <Tech iconId='git' width='100px' height='100px' viewBox="0 0 100 100"/>
                 <Tech iconId='git_hub' width='100px' height='100px' viewBox="0 0 100 100"/>
                 <Tech iconId='figma' width='100px' height='100px' viewBox="0 0 100 100"/>
@@ -18,5 +18,5 @@ export const AdditionalTech = () => {
 }
 
 const StyledTechSection = styled.section`
-    
+    padding-top: 100px;
 `

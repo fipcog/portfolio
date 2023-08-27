@@ -42,5 +42,6 @@ export const Projects = () => {
 }
 
 const StyledProjects = styled.section`
-    
+    padding-top: 100px;
+    padding-bottom: 140px;
 `

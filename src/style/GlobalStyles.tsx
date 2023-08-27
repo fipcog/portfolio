@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
 
         box-sizing: border-box;
+        line-height: 1.2em;
     }
 
     body {
@@ -17,6 +18,7 @@ export const GlobalStyles = createGlobalStyle`
 
         background-color: ${theme.colors.primaryBgr};
         color: ${theme.colors.color};
+        font-size: 18px;
         font-weight: 500;
 
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

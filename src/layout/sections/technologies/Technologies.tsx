@@ -11,8 +11,8 @@ export const Technologies = () => {
         <StyledSection>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
-                    <StyledSectionTitle>Technologies</StyledSectionTitle>
-                    <FlexWrapper direction='column' justify='center' align='senter'>
+                    <StyledSectionTitle alignSelf='baseline'>Technologies</StyledSectionTitle>
+                    <FlexWrapper direction='column' justify='center' align='center'>
                         <Skill title='HTML' skillPercent='80%' />
                         <Skill title='Css, Sass' skillPercent='75%' />
                         <Skill title='React' skillPercent='70%' />
@@ -26,5 +26,6 @@ export const Technologies = () => {
 }
 
 const StyledSection = styled.section`
-    
+    padding-top: 100px;
+    padding-bottom: 140px;
 `
