@@ -14,4 +14,6 @@ export const FlexWrapper = styled.div<FlexWrapperType>`
     justify-content: ${props => props.justify || "flex-start"};
     align-items: ${props => props.align || "stretch"};
     flex-wrap: ${props => props.wrap || "nowrap"};
+
+    height: 100%;
 `

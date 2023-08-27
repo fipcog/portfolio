@@ -5,6 +5,7 @@ export const theme = {
         border: "#A39D9D",
         color: "#e4e2e2",
 
+        accent:"#6978D1",
         accentGradient: {
             from: "#13ADC7",
             middle: "#6978D1",

@@ -21,5 +21,6 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-
+    width: 100%;
+    height: 100px;
 `
