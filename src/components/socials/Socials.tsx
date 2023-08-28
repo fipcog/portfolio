@@ -9,17 +9,17 @@ export const Socials = () => {
 		<SocialsWrapper>
 			<FlexWrapper as='ul' justify="space-between">
 				<StyledLisItem>
-					<StyledLink href="#">
+					<StyledLink href="#" aria-label='Ссылка на страницу гитхаб'>
 						<Icon iconId="github" />
 					</StyledLink>
 				</StyledLisItem>
 				<StyledLisItem>
-					<StyledLink href="#">
+					<StyledLink href="#" aria-label='Ссылка на страницу линкедин'>
 						<Icon iconId="in" />
 					</StyledLink>
 				</StyledLisItem>
 				<StyledLisItem>
-					<StyledLink href="#">
+					<StyledLink href="#" aria-label='Ссылка на телеграмм автора'>
 						<Icon iconId="tg" width="35px" height="30px" />
 					</StyledLink>
 				</StyledLisItem>

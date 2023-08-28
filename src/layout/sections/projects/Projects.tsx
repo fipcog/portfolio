@@ -13,7 +13,7 @@ export const Projects = () => {
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
-                    <FlexWrapper wrap='wrap' justify='baseline' gap='60px 40px'>
+                    <FlexWrapper wrap='wrap' justify='baseline' gap='60px 40px' aria-label='Список выполненных работ автора'>
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'

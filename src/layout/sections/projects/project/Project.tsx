@@ -13,11 +13,11 @@ type ProjectPropsTypes = {
 
 export const Project = (props:ProjectPropsTypes) => {
     return (
-        <StyledProject>
+        <StyledProject aria-label='Карточка работы из портфолио'>
             <AdaptiveImage srcJpeg={props.srcJpeg} srcWebp={props.srcWebp} width='500px' height='280px' bRadius='24px 8px 8px 8px' alt='Project Screen'/>
             <StyledTitle>{props.projectTitle}</StyledTitle>
             <StyledText>{props.projectDescr}</StyledText>
-            <StyledBtnLink as='a' href='#'>Look It Up</StyledBtnLink>
+            <StyledBtnLink as='a' href='#' aria-label='Перейти к просмотру работы'>Look It Up</StyledBtnLink>
         </StyledProject>
     )
 }

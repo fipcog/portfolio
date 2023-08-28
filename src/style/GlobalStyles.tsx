@@ -20,6 +20,8 @@ export const GlobalStyles = createGlobalStyle`
         color: ${theme.colors.color};
         font-size: 18px;
         font-weight: 500;
+        
+        overflow-x: hidden;
 
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

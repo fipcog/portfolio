@@ -8,11 +8,11 @@ type MenuPropTypes = {
 
 export const Menu = (props: MenuPropTypes) => {
     return (
-        <StyledMenu>
+        <StyledMenu role='menu'>
             {props.menuData.map(
                 (item: string) => {
-                    return <li key={Math.random() * (10000 - 1) + 1}>
-                        <StyledLink href='#'>{item}</StyledLink>
+                    return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
+                        <StyledLink href='#' aria-label='Ссылка на раздел'>{item}</StyledLink>
                     </li>
                 })}
         </StyledMenu>

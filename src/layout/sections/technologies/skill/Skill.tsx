@@ -13,14 +13,14 @@ type StyledSkillPropTypes = {
 
 export const Skill = (props: SkillPropTipes) => {
     return(
-        <StyledSkill>
+        <StyledSkill aria-label='Навык'>
             <SkillTitle>{props.title}</SkillTitle>
-            <SkillRange skillPercent={props.skillPercent}/>
+            <SkillRange skillPercent={props.skillPercent} aria-hidden/>
         </StyledSkill>
     )
 }
 
-const StyledSkill = styled.div`
+const StyledSkill = styled.li`
     width: 900px;
     
     margin-bottom: 25px;

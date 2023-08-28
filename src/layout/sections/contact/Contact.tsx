@@ -11,11 +11,11 @@ export const Contact = () => {
         <StyledContactSection>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
-                    <StyledSectionTitle alignSelf='baseline'>Contact</StyledSectionTitle>
-                    <StyledForm>
-                        <StyledTextInput placeholder='Name' />
-                        <StyledTextInput placeholder='Subject' />
-                        <StyledMessage placeholder='Your Message' />
+                    <StyledSectionTitle alignSelf='baseline'>Contact Me</StyledSectionTitle>
+                    <StyledForm name='contact' role='form' aria-label='Форма контакта с автором'>
+                        <StyledTextInput placeholder='Name' aria-placeholder='Введите имя'/>
+                        <StyledTextInput placeholder='Subject' aria-placeholder='Введите Тему Сообщения'/>
+                        <StyledMessage placeholder='Your Message' aria-placeholder='Введите ваше сообщение'/>
                         <StyledBtn>Send message</StyledBtn>
                     </StyledForm>
                 </FlexWrapper>

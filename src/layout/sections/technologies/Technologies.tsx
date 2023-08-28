@@ -12,7 +12,7 @@ export const Technologies = () => {
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Technologies</StyledSectionTitle>
-                    <FlexWrapper direction='column' justify='center' align='center'>
+                    <FlexWrapper as='ul' direction='column' justify='center' align='center' aria-label='Список основных навыков автора'>
                         <Skill title='HTML' skillPercent='80%' />
                         <Skill title='Css, Sass' skillPercent='75%' />
                         <Skill title='React' skillPercent='70%' />

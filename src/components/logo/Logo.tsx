@@ -5,7 +5,7 @@ import { theme } from "../../style/Theme";
 
 export const Logo = () => {
 	return (
-		<StyledLogo href="#">
+		<StyledLogo href="#" role='banner' aria-label='Логотип-ссылка на начало страницы'>
 			<svg width="185" height="48" viewBox="0 0 185 48" xmlns="http://www.w3.org/2000/svg">
 				<use xlinkHref={`${logo}#logo`}/>
 			</svg>

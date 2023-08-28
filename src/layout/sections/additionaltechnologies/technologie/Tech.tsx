@@ -7,16 +7,17 @@ type TechPropTypes = {
     width?: string;
     height?: string;
     viewBox?: string;
+    label: string;
 }
 
 export const Tech = (props: TechPropTypes) => {
     return(
-        <StyledTechIcon>
-            <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
+        <StyledTechIcon aria-label={props.label}>
+            <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox} />
         </StyledTechIcon>
     )
 }
 
-const StyledTechIcon = styled.div`
+const StyledTechIcon = styled.li`
     
 `

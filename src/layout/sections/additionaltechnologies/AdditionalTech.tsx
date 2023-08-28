@@ -8,10 +8,10 @@ export const AdditionalTech = () => {
     return(
         <StyledTechSection>
             <StyledSectionTitle>Additional technologies and skills</StyledSectionTitle>
-            <FlexWrapper wrap='wrap' justify='center' align='center' gap='0 50px'>
-                <Tech iconId='git' width='100px' height='100px' viewBox="0 0 100 100"/>
-                <Tech iconId='git_hub' width='100px' height='100px' viewBox="0 0 100 100"/>
-                <Tech iconId='figma' width='100px' height='100px' viewBox="0 0 100 100"/>
+            <FlexWrapper as='ul' wrap='wrap' justify='center' align='center' gap='0 50px' aria-label='Список дополнительных навыков автора'>
+                <Tech iconId='git' width='100px' height='100px' viewBox="0 0 100 100" label='Система гит'/>
+                <Tech iconId='git_hub' width='100px' height='100px' viewBox="0 0 100 100" label='Гитхаб'/>
+                <Tech iconId='figma' width='100px' height='100px' viewBox="0 0 100 100" label='Фигма'/>
             </FlexWrapper>
         </StyledTechSection>
     )

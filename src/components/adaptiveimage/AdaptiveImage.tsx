@@ -46,5 +46,8 @@ const StyledImage = styled.img<StyledImagePropsType>`
 
 const StyledPicture = styled.picture<StyledPicturePropsType>`
     display: block;
-    height: ${props => props.collapsePicture && '0px' || 'auto'};
+    height: ${props => (props.collapsePicture && '0px') || 'auto'};
+
+    position: relative;
+    z-index: 1;
 `
