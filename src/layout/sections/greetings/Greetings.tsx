@@ -47,6 +47,8 @@ const StyledHeader = styled.h1`
     margin-bottom: 15px;
 `
 const StyledText = styled.p`
+    display: flex;
+    max-width: 480px;
     margin-bottom: 60px;
 `
 const SteledImgPhoto = styled.div`

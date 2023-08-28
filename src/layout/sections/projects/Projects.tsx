@@ -12,8 +12,8 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
-                    <StyledSectionTitle>Projects</StyledSectionTitle>
-                    <FlexWrapper wrap='wrap' justify='space-around'>
+                    <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
+                    <FlexWrapper wrap='wrap' justify='baseline' gap='60px 40px'>
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'
@@ -22,12 +22,10 @@ export const Projects = () => {
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'
-                            projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-                        />
-                        <Project
-                            srcJpeg={plugJpeg} srcWebp={plugWebp}
-                            projectTitle='Project'
-                            projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                            projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                         />
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}

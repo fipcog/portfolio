@@ -12,7 +12,7 @@ export const Footer = () => {
                 <FlexWrapper align='center' justify='space-between'>
                     <FlexWrapper as='address' direction='column' justify='center'>
                         <span>Email:</span>
-                        <span>artyrsnitko.work@gmail.com</span>
+                        <span>artursnitko.work@gmail.com</span>
                     </FlexWrapper>
                     <Socials />
                 </FlexWrapper>
