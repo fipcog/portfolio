@@ -29,12 +29,12 @@ export const Socials = () => {
 }
 
 const SocialsWrapper = styled.div`
-	width: 150px;
+	min-width: 150px;
 	height: 32px;
 `
 
 const StyledLisItem = styled.li`
-	
+
 `
 
 const StyledLink = styled.a`

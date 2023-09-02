@@ -12,5 +12,10 @@ export const theme = {
             middle: "#6978D1",
             to: "#945DD6"
         }
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
 }

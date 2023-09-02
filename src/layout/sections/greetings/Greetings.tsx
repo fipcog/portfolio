@@ -88,5 +88,10 @@ const SteledImgPhoto = styled.div<SteledImgPhotoPropTypes>`
         background-image: url(${props => props.bgrImage});
         background-position: center;
         background-repeat: no-repeat;
+
+        @media screen and (max-width: 1169px) {
+            display: none;
+        }
     }
+
 `

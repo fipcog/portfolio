@@ -14,20 +14,24 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        min-width: 360px;
+
         margin: 0;
 
         background-color: ${theme.colors.primaryBgr};
         color: ${theme.colors.color};
         font-size: 18px;
         font-weight: 500;
-        
-        overflow-x: hidden;
 
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
             sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        @media screen and (min-width: 1170px) {
+            overflow-x: hidden
+        }
     }
 
     code {

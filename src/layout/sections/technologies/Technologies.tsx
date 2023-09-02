@@ -28,4 +28,8 @@ export const Technologies = () => {
 const StyledSection = styled.section`
     padding-top: 100px;
     padding-bottom: 140px;
+
+    @media screen and (max-width: 1169px) {
+            display: none;
+        }
 `
