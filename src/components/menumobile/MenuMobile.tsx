@@ -10,11 +10,11 @@ type MenuPropTypes = {
 export const MenuMobile = (props: MenuPropTypes) => {
     return (
         <StyledNavMenuMobile>
-            <StyledMenuBtn isOpen={true}>
-                <span/>
+            <StyledMenuBtn isOpen={true} aria-haspopup='menu'>
+                <span aria-hidden='true'/>
             </StyledMenuBtn>
 
-            <StyledMenuPopup isOpen={true}>
+            <StyledMenuPopup isOpen={true} aria-label='Всплывающее окно с меню'>
                 <StyledMenuMobile role='menu'>
                     {props.menuData.map(
                         (item: string) => {
