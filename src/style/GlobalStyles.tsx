@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import { screen } from '@testing-library/react';
 
 
 export const GlobalStyles = createGlobalStyle`
@@ -14,13 +15,14 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        min-width: 260px;
+        min-width: 410px;
 
         margin: 0;
 
         background-color: ${theme.colors.primaryBgr};
         color: ${theme.colors.color};
-        font-size: 18px;
+        /* font-size: 18px; */
+        font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
         font-weight: 500;
 
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

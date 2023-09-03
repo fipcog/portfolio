@@ -6,6 +6,7 @@ import { Project } from './project/Project'
 import plugJpeg from '../../../assets/images/plug.jpg'
 import plugWebp from '../../../assets/images/plug.webp'
 import { Container } from '../../../components/Container'
+import { theme } from '../../../style/Theme'
 
 export const Projects = () => {
     return (
@@ -13,7 +14,7 @@ export const Projects = () => {
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
-                    <StyledFlexWrapperWorks wrap='wrap' justify='baseline' gap='60px 40px' aria-label='Список выполненных работ автора'>
+                    <StyledGreedWrapperWorks aria-label='Список выполненных работ автора'>
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'
@@ -32,7 +33,7 @@ export const Projects = () => {
                             projectTitle='Project'
                             projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                         />
-                    </StyledFlexWrapperWorks>
+                    </StyledGreedWrapperWorks>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -44,6 +45,12 @@ const StyledProjects = styled.section`
     padding-bottom: 140px;
 `
 
-const StyledFlexWrapperWorks = styled(FlexWrapper)`
-    
+const StyledGreedWrapperWorks = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+
+    @media ${theme.media.tablet} {
+        grid-template-columns: repeat(1, 1fr);
+    }
 `

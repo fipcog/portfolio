@@ -26,7 +26,7 @@ const StyledSkill = styled.li`
 `
 const SkillTitle = styled.h3`
     display: inline-block;
-    width: 220px;
+    min-width: 220px;
 
     font-size: 24px;
     padding-left: 15px;

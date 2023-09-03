@@ -22,13 +22,14 @@ type StyledImagePropsType = {
 
 type StyledPicturePropsType = {
     collapsePicture?: boolean;
+    width?: string;
 }
 
 
 
 export const AdaptiveImage = (props:ImagePropsType) => {
     return(
-        <StyledPicture collapsePicture={props.collapsePicture}>
+        <StyledPicture collapsePicture={props.collapsePicture} width={props.width}>
             <source srcSet={props.srcWebp} type='image/webp'/>
             <source srcSet={props.srcJpeg} type='image/jpeg'/>
             <StyledImage src={props.srcJpeg} alt={props.alt} width={props.width} height={props.height} fit={props.fit} position={props.position} bRadius={props.bRadius}/>
@@ -37,8 +38,9 @@ export const AdaptiveImage = (props:ImagePropsType) => {
 }
 
 const StyledImage = styled.img<StyledImagePropsType>`
-    max-width: ${props => props.width || '200px'};
-    max-height: ${props => props.height || '350px'};
+    display: block;
+    width: ${props => props.width || '200px'};
+    height: ${props => props.height || '350px'};
     object-fit: ${props => props.fit || 'cover'};
     object-position: ${props => props.position || '50% 50%'};
     border-radius: ${props => props.bRadius || '0px'};
@@ -46,6 +48,7 @@ const StyledImage = styled.img<StyledImagePropsType>`
 
 const StyledPicture = styled.picture<StyledPicturePropsType>`
     display: block;
+    width: ${props => props.width || 'auto'};
     height: ${props => (props.collapsePicture && '0px') || 'auto'};
 
     position: relative;

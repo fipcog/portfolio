@@ -14,7 +14,7 @@ type ProjectPropsTypes = {
 export const Project = (props:ProjectPropsTypes) => {
     return (
         <StyledProject aria-label='Карточка работы из портфолио'>
-            <AdaptiveImage srcJpeg={props.srcJpeg} srcWebp={props.srcWebp} width='500px' height='280px' bRadius='24px 8px 8px 8px' alt='Project Screen'/>
+            <AdaptiveImage srcJpeg={props.srcJpeg} srcWebp={props.srcWebp} width='100%' height='280px' bRadius='24px 8px 8px 8px' fit='fill' alt='Project Screen'/>
             <StyledTitle>{props.projectTitle}</StyledTitle>
             <StyledText>{props.projectDescr}</StyledText>
             <StyledBtnLink as='a' href='#' aria-label='Перейти к просмотру работы'>Look It Up</StyledBtnLink>
@@ -28,11 +28,27 @@ const StyledProject = styled.article`
     align-items: center;
 
     max-width: 550px;
-    /* min-height: 670px; */
+    max-height: 670px;
 
     padding: 25px;
     border: 1px solid ${theme.colors.border};
     border-radius: 50px 0px;
+
+    @media (min-width: 769px) and (max-width: 1169px) {
+        max-width: 390px;
+        
+        picture > img {
+            height: 200px;
+        }
+    }
+
+    @media ${theme.media.mobile} {
+        max-width: 390px;
+        
+        picture > img {
+            height: 200px;
+        }
+    }
 `
 
 const StyledTitle = styled.h3`
@@ -59,6 +75,14 @@ const StyledTitle = styled.h3`
         margin: 0 auto;
 
         background-image: linear-gradient(to left, ${theme.colors.accentGradient.from} 20%, ${theme.colors.accentGradient.middle} 50%, ${theme.colors.accentGradient.to} 90%);
+
+        @media (min-width: 769px) and (max-width: 1169px) {
+            width: 200px;
+        }
+
+        @media ${theme.media.mobile} {
+            width: 200px;
+        }
     }
 `
 

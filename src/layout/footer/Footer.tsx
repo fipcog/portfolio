@@ -46,6 +46,7 @@ const StyledFlexWrapperAdaptive = styled(FlexWrapper)`
 const StyledFlexWrapperAddress = styled(FlexWrapper)`
     @media ${theme.media.mobile} {
         text-align: center;
+        word-break: break-all;
         margin-bottom: 20px;
     }
 `

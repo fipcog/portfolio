@@ -18,7 +18,7 @@ export const Greetings = () => {
         <StyledGeetings>
             <Container>
                 <FlexWrapper as={StyledFlexWrapperAdaptive} justify='space-between' align='center'>
-                    <FlexWrapper as={StyledFlexWrapperText} direction='column' width='70%' justify='center' role='contentinfo'>
+                    <FlexWrapper as={StyledFlexWrapperText} direction='column' width='50%' justify='center' role='contentinfo'>
                         <StyledName aria-label='Представление автора'>Hello! I am Snitko Artur</StyledName>
                         <StyledHeader aria-label='Специальность автора'>A Web Developer</StyledHeader>
                         <StyledText aria-label='Послание от автора'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</StyledText>
@@ -112,9 +112,12 @@ const StyledImgPhoto = styled.div<SteledImgPhotoPropTypes>`
     }
 `
 const StyledFlexWrapperText = styled(FlexWrapper)`
+
     @media screen and (max-width: 900px) {
         justify-content: center;
         align-items: center;
+
+        max-width: 90%;
 
         margin-top: 60px;
 

@@ -32,6 +32,8 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 `
 const StyledTextInput = styled.input`
     width: 540px;
@@ -45,6 +47,10 @@ const StyledTextInput = styled.input`
     background: ${theme.colors.primaryBgr};
 
     color: ${theme.colors.color};
+
+    @media ${theme.media.mobile} {
+        width: 100%;
+    }
 `
 const StyledMessage = styled.textarea`
     width: 540px;
@@ -58,4 +64,8 @@ const StyledMessage = styled.textarea`
     background: ${theme.colors.primaryBgr};
 
     color: ${theme.colors.color};
+
+    @media ${theme.media.mobile} {
+        width: 100%;
+    }
 `
