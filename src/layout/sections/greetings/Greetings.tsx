@@ -17,18 +17,18 @@ export const Greetings = () => {
     return (
         <StyledGeetings>
             <Container>
-                <FlexWrapper justify='space-between' align='center'>
-                    <FlexWrapper direction='column' width='70%' justify='center' role='contentinfo'>
+                <FlexWrapper as={StyledFlexWrapperAdaptive} justify='space-between' align='center'>
+                    <FlexWrapper as={StyledFlexWrapperText} direction='column' width='70%' justify='center' role='contentinfo'>
                         <StyledName aria-label='Представление автора'>Hello! I am Snitko Artur</StyledName>
                         <StyledHeader aria-label='Специальность автора'>A Web Developer</StyledHeader>
                         <StyledText aria-label='Послание от автора'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</StyledText>
                         <StyledBtn width='240px' height='60px' aria-label='Начать ознакомление'>Let’s Begin</StyledBtn>
                     </FlexWrapper>
-                    <SteledImgPhoto bgrImage={bgrImage}> 
+                    <StyledImgPhoto bgrImage={bgrImage}> 
                         <AdaptiveImage
                             srcJpeg={photo} srcWebp={photoWebp} alt='Фото автора'
                             width='380px' height='450px' position='right bottom' collapsePicture={true} bRadius='50px 0px'/>
-                    </SteledImgPhoto>
+                    </StyledImgPhoto>
                 </FlexWrapper>
             </Container>
         </StyledGeetings>
@@ -42,23 +42,40 @@ const StyledGeetings = styled.section`
 
     padding-top: 225px;
     padding-bottom: 125px;
+
+    @media ${theme.media.mobile} {
+        padding-top: 125px;
+    }
 `
 const StyledName = styled.span`
     font-size: 54px;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
 `
 const StyledHeader = styled.h1`
     font-size: inherit;
     font-weight: 500;
 
     margin-bottom: 15px;
+
+    @media screen and (max-width: 900px) {
+        font-size: 1.2em;
+        text-align: center;
+    }
 `
 const StyledText = styled.p`
     display: flex;
     max-width: 480px;
     margin-bottom: 60px;
+
+    @media screen and (max-width: 900px) {
+        text-align: center;
+    }
 `
-const SteledImgPhoto = styled.div<SteledImgPhotoPropTypes>`
+const StyledImgPhoto = styled.div<SteledImgPhotoPropTypes>`
     position: relative;
     min-width: 380px;
     min-height: 450px;
@@ -88,10 +105,26 @@ const SteledImgPhoto = styled.div<SteledImgPhotoPropTypes>`
         background-image: url(${props => props.bgrImage});
         background-position: center;
         background-repeat: no-repeat;
-
-        @media screen and (max-width: 1169px) {
-            display: none;
-        }
     }
 
+    @media screen and (max-width: 900px) {
+        order: 1;
+    }
+`
+const StyledFlexWrapperText = styled(FlexWrapper)`
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 60px;
+
+        order: 2;
+        z-index: 1;
+    }
+`
+const StyledFlexWrapperAdaptive = styled(FlexWrapper)`
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `

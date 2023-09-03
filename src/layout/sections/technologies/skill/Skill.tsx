@@ -21,17 +21,23 @@ export const Skill = (props: SkillPropTipes) => {
 }
 
 const StyledSkill = styled.li`
-    width: 900px;
-    
+    min-width: 79%;
     margin-bottom: 25px;
 `
 const SkillTitle = styled.h3`
+    display: inline-block;
+    width: 220px;
+
     font-size: 24px;
     padding-left: 15px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `
 const SkillRange = styled.div<StyledSkillPropTypes>`
     position: relative;
-    width: 900px;
+    width: 100%;
     height: 18px;
     background-color: ${theme.colors.skillBgr};
     border-radius: 80px;

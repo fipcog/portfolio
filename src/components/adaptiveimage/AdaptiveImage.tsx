@@ -37,8 +37,8 @@ export const AdaptiveImage = (props:ImagePropsType) => {
 }
 
 const StyledImage = styled.img<StyledImagePropsType>`
-    width: ${props => props.width || '200px'};
-    height: ${props => props.height || '350px'};
+    max-width: ${props => props.width || '200px'};
+    max-height: ${props => props.height || '350px'};
     object-fit: ${props => props.fit || 'cover'};
     object-position: ${props => props.position || '50% 50%'};
     border-radius: ${props => props.bRadius || '0px'};

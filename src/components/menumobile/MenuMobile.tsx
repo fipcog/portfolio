@@ -10,18 +10,18 @@ type MenuPropTypes = {
 export const MenuMobile = (props: MenuPropTypes) => {
     return (
         <StyledNavMenuMobile>
-            <StyledMenuBtn isOpen={true} aria-haspopup='menu'>
-                <span aria-hidden='true'/>
+            <StyledMenuBtn isOpen={!true} aria-haspopup='menu'>
+                <span aria-hidden='true' />
             </StyledMenuBtn>
 
-            <StyledMenuPopup isOpen={true} aria-label='Всплывающее окно с меню'>
+            <StyledMenuPopup isOpen={!true} aria-label='Всплывающее окно с меню'>
                 <StyledMenuMobile role='menu'>
                     {props.menuData.map(
                         (item: string) => {
                             return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
                                 <StyledLink href='#' aria-label='Ссылка на раздел'>{item}</StyledLink>
                             </li>
-                        })}
+                    })}
                 </StyledMenuMobile>
                 <Socials />
             </StyledMenuPopup>
@@ -30,6 +30,7 @@ export const MenuMobile = (props: MenuPropTypes) => {
 }
 
 const StyledNavMenuMobile = styled.nav`
+    display: none;
     position: relative;
 	width: 70%;
 
@@ -38,7 +39,7 @@ const StyledNavMenuMobile = styled.nav`
     }
 `
 
-const StyledMenuPopup = styled.div<{isOpen: boolean}>`
+const StyledMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 0%;
@@ -52,12 +53,12 @@ const StyledMenuPopup = styled.div<{isOpen: boolean}>`
 
     background-color: rgba(31, 31, 31, 0.9);
 
-    ${props => props.isOpen && css<{isOpen: boolean}>`
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
     `}
 `
 
-const StyledMenuBtn = styled.button<{isOpen: boolean}>`
+const StyledMenuBtn = styled.button<{ isOpen: boolean }>`
     position: fixed;
     display: flex;
     justify-content: center;
@@ -82,7 +83,7 @@ const StyledMenuBtn = styled.button<{isOpen: boolean}>`
         
         background-color: ${theme.colors.color};
 
-        ${props => props.isOpen && css<{isOpen: boolean}>`
+        ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: transparent;
         `}
 
@@ -96,7 +97,7 @@ const StyledMenuBtn = styled.button<{isOpen: boolean}>`
             transform: translateY(-15px);
             background-color: ${theme.colors.color};
 
-            ${props => props.isOpen && css<{isOpen: boolean}>`
+            ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: translateY(0) rotate(45deg);
             `}
         }
@@ -111,7 +112,7 @@ const StyledMenuBtn = styled.button<{isOpen: boolean}>`
             transform: translateY(15px);
             background-color: ${theme.colors.color};
 
-            ${props => props.isOpen && css<{isOpen: boolean}>`
+            ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: translateY(0) rotate(-45deg);
             `}
         }

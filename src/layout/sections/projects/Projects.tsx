@@ -13,7 +13,7 @@ export const Projects = () => {
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
-                    <FlexWrapper wrap='wrap' justify='baseline' gap='60px 40px' aria-label='Список выполненных работ автора'>
+                    <StyledFlexWrapperWorks wrap='wrap' justify='baseline' gap='60px 40px' aria-label='Список выполненных работ автора'>
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'
@@ -32,7 +32,7 @@ export const Projects = () => {
                             projectTitle='Project'
                             projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                         />
-                    </FlexWrapper>
+                    </StyledFlexWrapperWorks>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -42,4 +42,8 @@ export const Projects = () => {
 const StyledProjects = styled.section`
     padding-top: 100px;
     padding-bottom: 140px;
+`
+
+const StyledFlexWrapperWorks = styled(FlexWrapper)`
+    
 `

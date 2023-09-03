@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        min-width: 360px;
+        min-width: 260px;
 
         margin: 0;
 
@@ -28,10 +28,6 @@ export const GlobalStyles = createGlobalStyle`
             sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-
-        @media screen and (min-width: 1170px) {
-            overflow-x: hidden
-        }
     }
 
     code {

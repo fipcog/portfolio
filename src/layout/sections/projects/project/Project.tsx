@@ -28,7 +28,7 @@ const StyledProject = styled.article`
     align-items: center;
 
     max-width: 550px;
-    min-height: 670px;
+    /* min-height: 670px; */
 
     padding: 25px;
     border: 1px solid ${theme.colors.border};

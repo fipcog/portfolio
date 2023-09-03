@@ -3,14 +3,19 @@ import { Greetings } from "../sections/greetings/Greetings";
 import { Projects } from "../sections/projects/Projects";
 import { Technologies } from "../sections/technologies/Technologies";
 import { Contact } from "../sections/contact/Contact";
+import styled from "styled-components";
 
 export const Main = () => {
     return (
-        <main>
+        <StyledMain>
             <Greetings />
             <Projects/>
             <Technologies/>
             <Contact/>
-        </main>
+        </StyledMain>
     )
 }
+
+const StyledMain = styled.main`
+    overflow-x: hidden;
+`
