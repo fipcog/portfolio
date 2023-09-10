@@ -5,9 +5,9 @@ import bgrImage from '../../../assets/images/background-element.svg'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { AdaptiveImage } from '../../../components/adaptiveimage/AdaptiveImage'
 import styled from 'styled-components'
-import { StyledBtn } from '../../../components/btn/Btn'
 import { Container } from '../../../components/Container'
 import { theme } from '../../../style/Theme'
+import { Link } from 'react-scroll'
 
 type SteledImgPhotoPropTypes = {
     bgrImage: string;
@@ -15,14 +15,14 @@ type SteledImgPhotoPropTypes = {
 
 export const Greetings = () => {
     return (
-        <StyledGeetings>
+        <StyledGeetings id='greetings'>
             <Container>
                 <FlexWrapper as={StyledFlexWrapperAdaptive} justify='space-between' align='center'>
                     <FlexWrapper as={StyledFlexWrapperText} direction='column' width='50%' justify='center' role='contentinfo'>
                         <StyledName aria-label='Представление автора'>Hello! I am Snitko Artur</StyledName>
                         <StyledHeader aria-label='Специальность автора'>A Web Developer</StyledHeader>
                         <StyledText aria-label='Послание от автора'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</StyledText>
-                        <StyledBtn width='240px' height='60px' aria-label='Начать ознакомление'>Let’s Begin</StyledBtn>
+                        <StyledLink to='projects' smooth={true} aria-label='Начать ознакомление'>Let’s Begin</StyledLink>
                     </FlexWrapper>
                     <StyledImgPhoto bgrImage={bgrImage}> 
                         <AdaptiveImage
@@ -129,5 +129,34 @@ const StyledFlexWrapperAdaptive = styled(FlexWrapper)`
     @media screen and (max-width: 900px) {
         flex-direction: column;
         justify-content: center;
+    }
+`
+
+const StyledLink = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 240px;
+    height: 60px;
+
+    border: none;
+    border-radius: 80px;
+    background-image: linear-gradient(to left, ${theme.colors.accentGradient.from} 20%, ${theme.colors.accentGradient.middle} 50%, ${theme.colors.accentGradient.to} 90%);
+
+    color: ${theme.colors.color};
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        background-image: linear-gradient(to left, ${theme.colors.accentGradient.from} 20%, ${theme.colors.accentGradient.middle} 40%, ${theme.colors.accentGradient.to} 70%);
+        color: #FFFFFF;
+    }
+
+    &:active {
+        transform: translateY(1px);
     }
 `

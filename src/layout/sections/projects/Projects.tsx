@@ -10,7 +10,7 @@ import { theme } from '../../../style/Theme'
 
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <StyledProjects id='projects'>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
@@ -32,6 +32,14 @@ export const Projects = () => {
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'
                             projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                        />
+                        <Project
+                            srcJpeg={plugJpeg} srcWebp={plugWebp}
+                            projectTitle='Project'
+                            projectDescr='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
                         />
                     </StyledGreedWrapperWorks>
                 </FlexWrapper>

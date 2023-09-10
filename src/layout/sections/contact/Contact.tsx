@@ -8,7 +8,7 @@ import { theme } from '../../../style/Theme';
 
 export const Contact = () => {
     return (
-        <StyledContactSection>
+        <StyledContactSection id='contact'> 
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Contact Me</StyledSectionTitle>

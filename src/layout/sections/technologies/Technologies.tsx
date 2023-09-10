@@ -8,7 +8,7 @@ import { Container } from '../../../components/Container'
 
 export const Technologies = () => {
     return (
-        <StyledSection>
+        <StyledSection id='technologies'>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
                     <StyledSectionTitle alignSelf='baseline'>Technologies</StyledSectionTitle>

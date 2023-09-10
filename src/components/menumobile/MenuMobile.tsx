@@ -1,25 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import { theme } from '../../style/Theme';
 import { Socials } from '../socials/Socials';
+import { Link } from 'react-scroll';
 
 type MenuPropTypes = {
-    menuData: Array<string>;
+    menuData: Array<{name: string, id: string}>;
+}
+
+type ItemType = {
+    name: string,
+    id: string
 }
 
 export const MenuMobile = (props: MenuPropTypes) => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
     return (
         <StyledNavMenuMobile>
-            <StyledMenuBtn isOpen={!true} aria-haspopup='menu'>
+            <StyledMenuBtn onClick={() => setIsMenuOpen(!isMenuOpen)} isOpen={isMenuOpen} aria-haspopup='menu'>
                 <span aria-hidden='true' />
             </StyledMenuBtn>
 
-            <StyledMenuPopup isOpen={!true} aria-label='Всплывающее окно с меню'>
+            <StyledMenuPopup isOpen={isMenuOpen} aria-hidden={!isMenuOpen} aria-label='Всплывающее окно с меню'>
                 <StyledMenuMobile role='menu'>
                     {props.menuData.map(
-                        (item: string) => {
+                        (item:ItemType) => {
                             return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
-                                <StyledLink href='#' aria-label='Ссылка на раздел'>{item}</StyledLink>
+                                <StyledLink to={item.id}
+                                            activeClass="active" 
+                                            smooth={true} 
+                                            aria-label='Ссылка на раздел' 
+                                            onClick={() => setIsMenuOpen(!isMenuOpen)}>{item.name}</StyledLink>
                             </li>
                     })}
                 </StyledMenuMobile>
@@ -30,13 +42,9 @@ export const MenuMobile = (props: MenuPropTypes) => {
 }
 
 const StyledNavMenuMobile = styled.nav`
-    display: none;
+    display: flex;
     position: relative;
 	width: 70%;
-
-    @media ${theme.media.tablet} {
-        display: flex;
-    }
 `
 
 const StyledMenuPopup = styled.div<{ isOpen: boolean }>`
@@ -46,15 +54,17 @@ const StyledMenuPopup = styled.div<{ isOpen: boolean }>`
     right: 0;
     bottom: 0;
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     background-color: rgba(31, 31, 31, 0.9);
+    transition: .2s;
+    transform: translateX(-100%);
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: flex;
+        transform: translateX(0);
     `}
 `
 
@@ -82,6 +92,7 @@ const StyledMenuBtn = styled.button<{ isOpen: boolean }>`
         height: 5px;
         
         background-color: ${theme.colors.color};
+        transition: .1s ease-in-out;
 
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: transparent;
@@ -95,6 +106,7 @@ const StyledMenuBtn = styled.button<{ isOpen: boolean }>`
             height: 5px;
 
             transform: translateY(-15px);
+            transition: .2s ease-in-out;
             background-color: ${theme.colors.color};
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -110,6 +122,7 @@ const StyledMenuBtn = styled.button<{ isOpen: boolean }>`
             height: 5px;
 
             transform: translateY(15px);
+            transition: .2s ease-in-out;
             background-color: ${theme.colors.color};
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -136,11 +149,11 @@ const StyledMenuMobile = styled.ul`
     }
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     color: ${theme.colors.color};
     font-size: 2em;
 
-    &:hover {
+    &:hover, &.active {
         color: ${theme.colors.accent};
     }
 `

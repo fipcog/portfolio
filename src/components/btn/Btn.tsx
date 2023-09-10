@@ -31,3 +31,11 @@ export const StyledBtn = styled.button<StyledBtnTypes>`
         transform: translateY(1px);
     }
 `
+
+export const StyledBtnLink = styled(StyledBtn)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+`

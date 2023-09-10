@@ -2,9 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { theme } from '../../style/Theme';
 import { Socials } from './../socials/Socials';
+import { Link } from 'react-scroll';
 
 type MenuPropTypes = {
-    menuData: Array<string>;
+    menuData: Array<{name: string, id: string}>;
+}
+
+type ItemType = {
+    name: string,
+    id: string
 }
 
 export const Menu = (props: MenuPropTypes) => {
@@ -12,9 +18,9 @@ export const Menu = (props: MenuPropTypes) => {
         <StyledNavMenu>
             <StyledMenu role='menu'>
                 {props.menuData.map(
-                    (item: string) => {
+                    (item: ItemType) => {
                         return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
-                            <StyledLink href='#' aria-label='Ссылка на раздел'>{item}</StyledLink>
+                            <StyledLink to={item.id} activeClass="active" smooth={true} aria-label='Ссылка на раздел'>{item.name}</StyledLink>
                         </li>
                     })}
             </StyledMenu>
@@ -27,10 +33,6 @@ const StyledNavMenu = styled.nav`
     display: flex;
 	justify-content: space-between;
 	width: 70%;
-
-    @media ${theme.media.tablet} {
-        display: none;
-    }
 `
 
 const StyledMenu = styled.ul`
@@ -39,16 +41,13 @@ const StyledMenu = styled.ul`
     align-items: center;
     
     width: 65%;
-
-    li + li {
-        /* margin-left: 80px; */
-    }
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     color: ${theme.colors.color};
 
-    &:hover {
+    &:hover, &.active {
         color: ${theme.colors.accent};
+        cursor: pointer;
     }
 `
