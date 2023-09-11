@@ -5,13 +5,16 @@ import { FlexWrapper } from '../../../components/FlexWrapper'
 import { Skill } from './skill/Skill'
 import { AdditionalTech } from '../additionaltechnologies/AdditionalTech'
 import { Container } from '../../../components/Container'
+import { Slide } from "react-awesome-reveal";
 
 export const Technologies = () => {
     return (
         <StyledSection id='technologies'>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
-                    <StyledSectionTitle alignSelf='baseline'>Technologies</StyledSectionTitle>
+                    <Slide triggerOnce style={{width: '100%'}} fraction={1}>
+                        <StyledSectionTitle alignSelf='baseline'>Technologies</StyledSectionTitle>
+                    </Slide>
                     <FlexWrapper as='ul' direction='column' justify='center' align='center' aria-label='Список основных навыков автора'>
                         <Skill title='HTML' skillPercent='80%' />
                         <Skill title='Css, Sass' skillPercent='75%' />

@@ -29,7 +29,9 @@ export const MenuMobile = (props: MenuPropTypes) => {
                             return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
                                 <StyledLink to={item.id}
                                             activeClass="active" 
+                                            spy={true}
                                             smooth={true} 
+                                            offset={-100}
                                             aria-label='Ссылка на раздел' 
                                             onClick={() => setIsMenuOpen(!isMenuOpen)}>{item.name}</StyledLink>
                             </li>
@@ -152,6 +154,7 @@ const StyledMenuMobile = styled.ul`
 const StyledLink = styled(Link)`
     color: ${theme.colors.color};
     font-size: 2em;
+    transition: .2s;
 
     &:hover, &.active {
         color: ${theme.colors.accent};

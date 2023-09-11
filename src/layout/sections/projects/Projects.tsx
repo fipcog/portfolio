@@ -7,14 +7,17 @@ import plugJpeg from '../../../assets/images/plug.jpg'
 import plugWebp from '../../../assets/images/plug.webp'
 import { Container } from '../../../components/Container'
 import { theme } from '../../../style/Theme'
+import { Slide } from "react-awesome-reveal";
 
 export const Projects = () => {
     return (
         <StyledProjects id='projects'>
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
+                <Slide triggerOnce style={{width: '100%'}} fraction={1}>
                     <StyledSectionTitle alignSelf='baseline'>Projects</StyledSectionTitle>
-                    <StyledGreedWrapperWorks aria-label='Список выполненных работ автора'>
+                </Slide>
+                <StyledGreedWrapperWorks aria-label='Список выполненных работ автора'>
                         <Project
                             srcJpeg={plugJpeg} srcWebp={plugWebp}
                             projectTitle='Project'

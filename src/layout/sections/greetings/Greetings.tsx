@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { theme } from '../../../style/Theme'
 import { Link } from 'react-scroll'
+import { AttentionSeeker} from "react-awesome-reveal";
 
 type SteledImgPhotoPropTypes = {
     bgrImage: string;
@@ -22,7 +23,9 @@ export const Greetings = () => {
                         <StyledName aria-label='Представление автора'>Hello! I am Snitko Artur</StyledName>
                         <StyledHeader aria-label='Специальность автора'>A Web Developer</StyledHeader>
                         <StyledText aria-label='Послание от автора'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</StyledText>
-                        <StyledLink to='projects' smooth={true} aria-label='Начать ознакомление'>Let’s Begin</StyledLink>
+                        <AttentionSeeker effect='headShake' fraction={1}>
+                            <StyledLink to='projects' smooth={true} aria-label='Начать ознакомление'>Let’s Begin</StyledLink>
+                        </AttentionSeeker>
                     </FlexWrapper>
                     <StyledImgPhoto bgrImage={bgrImage}> 
                         <AdaptiveImage

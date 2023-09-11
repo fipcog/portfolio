@@ -18,6 +18,9 @@ export const Logo = () => {
 const StyledLogo = styled(Link)`
 	height: 48px;
 
+	cursor: pointer;
+	transition: .2s;
+
 	&:first-child {
 		fill: ${theme.colors.color};
 	}

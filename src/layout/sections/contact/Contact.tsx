@@ -5,13 +5,16 @@ import { StyledBtn } from '../../../components/btn/Btn'
 import { Container } from './../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from '../../../style/Theme';
+import { Slide } from "react-awesome-reveal";
 
 export const Contact = () => {
     return (
         <StyledContactSection id='contact'> 
             <Container>
                 <FlexWrapper direction='column' justify='center' align='center'>
-                    <StyledSectionTitle alignSelf='baseline'>Contact Me</StyledSectionTitle>
+                    <Slide triggerOnce style={{width: '100%'}} fraction={1}>
+                        <StyledSectionTitle alignSelf='baseline'>Contact Me</StyledSectionTitle>
+                    </Slide>
                     <StyledForm name='contact' role='form' aria-label='Форма контакта с автором'>
                         <StyledTextInput placeholder='Name' aria-placeholder='Введите имя'/>
                         <StyledTextInput placeholder='Subject' aria-placeholder='Введите Тему Сообщения'/>

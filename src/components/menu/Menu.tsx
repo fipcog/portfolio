@@ -20,7 +20,12 @@ export const Menu = (props: MenuPropTypes) => {
                 {props.menuData.map(
                     (item: ItemType) => {
                         return <li role='menuitem' key={Math.random() * (10000 - 1) + 1}>
-                            <StyledLink to={item.id} activeClass="active" smooth={true} aria-label='Ссылка на раздел'>{item.name}</StyledLink>
+                            <StyledLink to={item.id} 
+                            activeClass="active" 
+                            spy={true} 
+                            smooth={true} 
+                            offset={-100} 
+                            aria-label='Ссылка на раздел'>{item.name}</StyledLink>
                         </li>
                     })}
             </StyledMenu>
@@ -46,8 +51,10 @@ const StyledMenu = styled.ul`
 const StyledLink = styled(Link)`
     color: ${theme.colors.color};
 
+    cursor: pointer;
+    transition: .2s;
+
     &:hover, &.active {
         color: ${theme.colors.accent};
-        cursor: pointer;
     }
 `
